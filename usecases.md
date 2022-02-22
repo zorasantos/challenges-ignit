@@ -1,3 +1,16 @@
+# Create user
+
+A rota deve receber name, e username dentro do corpo da requisição. Ao cadastrar um novo usuário, ele deve ser armazenado dentro de um objeto no seguinte formato:
+
+```js
+   {
+      id: 'uuid', // precisa ser um uuid
+      name: 'Danilo Vieira',
+      username: 'danilo',
+      todos: []
+    }
+  ```
+
 # Create todo
 
 Cada tarefa deverá estar no seguinte formato:
@@ -12,4 +25,4 @@ Cada tarefa deverá estar no seguinte formato:
     }
 
   ```
-. Certifique-se que o ID seja um UUID.
+Certifique-se que o ID seja um UUID.
