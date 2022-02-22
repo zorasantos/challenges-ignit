@@ -3,4 +3,4 @@ interface ICreateTodoDTO {
   deadline: Date;
 }
 
-export { ICreateTodoDTO }
+export { ICreateTodoDTO };

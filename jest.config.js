@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-export default {
+module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -31,7 +31,7 @@ export default {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -173,29 +173,29 @@ export default {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.(t|j)sx?$": [
-      "@swc/jest",
+    '^.+\\.(t|j)sx?$': [
+      '@swc/jest',
       {
         jsc: {
           parser: {
             syntax: 'typescript',
             tsx: false,
-            decorators: true,
+            decorators: true
           },
-          target: 'es2017',
+          target: 'es2020',
           keepClassNames: true,
           transform: {
             legacyDecorator: true,
-            decoratorMetadata: true,
-          },
+            decoratorMetadata: true
+          }
         },
         module: {
           type: 'es6',
-          noInterop: false,
-        },
-      },
-    ],
-  },
+          noInterop: false
+        }
+      }
+    ]
+  }
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

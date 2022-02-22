@@ -1,5 +1,5 @@
-import { Todo } from "../../entities/Todo";
-import { ITodoRepository } from "../../repositories/ITodoRepository";
+import { Todo } from '../../entities/Todo';
+import { ITodoRepository } from '../../repositories/ITodoRepository';
 
 interface ICreateTodoRequestDTO {
   title: string;
@@ -9,11 +9,10 @@ interface ICreateTodoRequestDTO {
 class CreateTodoUseCase {
   constructor(private todoRepository: ITodoRepository) {}
   async execute({ deadline, title }: ICreateTodoRequestDTO): Promise<Todo> {
-
     const todo = await this.todoRepository.create({
       deadline,
       title
-    })
+    });
 
     return todo;
   }

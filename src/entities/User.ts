@@ -7,12 +7,11 @@ class User {
   todo!: Array<[]>;
 
   constructor() {
-    if(!this.id) {
-      this.id = uuidV4()
-      this.todo = []
+    if (!this.id) {
+      this.id = uuidV4();
+      this.todo = [];
     }
   }
-
 }
 
-export { User }
+export { User };

@@ -1,6 +1,7 @@
 {
   "env": {
-    "es2020": true,
+    "commonjs": true,
+    "es2021": true,
     "node": true,
     "jest": true
   },
@@ -25,7 +26,7 @@
     "camelcase": "off",
     "import/no-unresolved": "error",
     "@typescript-eslint/no-unsafe-assignment": "off",
-    "@typescript-eslint/explicit-module-boundary-types": ["error"],
+    // "@typescript-eslint/explicit-module-boundary-types": ["error"],
     // "no-use-before-define": ["off", { "functions": true, "classes": true, "variables": true }],
     "@typescript-eslint/naming-convention": [
       "error",
@@ -36,6 +37,12 @@
           "regex": "^I[A-Z]",
           "match": true
         }
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "off",
+      {
+        "checksConditionals": false
       }
     ],
     "class-methods-use-this": "off",

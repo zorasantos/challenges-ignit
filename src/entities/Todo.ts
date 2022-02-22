@@ -12,13 +12,12 @@ class Todo {
   created_at!: Date;
 
   constructor() {
-    if(!this.id) {
-      this.id = uuidV4()
-      this.done = false
-      this.created_at = new Date()
+    if (!this.id) {
+      this.id = uuidV4();
+      this.done = false;
+      this.created_at = new Date();
     }
   }
-
 }
 
-export { Todo }
+export { Todo };

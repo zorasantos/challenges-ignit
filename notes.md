@@ -16,3 +16,6 @@
 ## Single Responsibility Principle (SRP)
 ### obs: (Resolve God Class and Divergent Change)
   - Cada class precisa ter apenas uma responsabilidade
+
+
+  array.splice(object, 1)

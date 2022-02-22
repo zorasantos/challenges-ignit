@@ -1,6 +1,6 @@
-interface ICreateUserDTO {
+interface ICreateUserRequestDTO {
   name: string;
   username: string;
 }
 
-export { ICreateUserDTO }
+export { ICreateUserRequestDTO };
