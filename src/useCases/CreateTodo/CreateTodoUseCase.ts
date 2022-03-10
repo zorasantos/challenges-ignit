@@ -1,5 +1,6 @@
 import { Todo } from '../../entities/Todo';
-import { ITodoRepository } from '../../repositories/ITodoRepository';
+import { IUserRepository } from '../../repositories/IUserRepository';
+// import { ITodoRepository } from '../../repositories/ITodoRepository';
 
 interface ICreateTodoRequestDTO {
   title: string;
@@ -7,9 +8,9 @@ interface ICreateTodoRequestDTO {
 }
 
 class CreateTodoUseCase {
-  constructor(private todoRepository: ITodoRepository) {}
+  constructor(private userRepository: IUserRepository) {}
   async execute({ deadline, title }: ICreateTodoRequestDTO): Promise<Todo> {
-    const todo = await this.todoRepository.create({
+    const todo = await this.userRepository.createTodo({
       deadline,
       title
     });

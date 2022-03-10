@@ -1,13 +1,14 @@
-import { TodoRepositoryInMemory } from '../../repositories/in-memory/TodoRepositoryInMemory';
+// import { TodoRepositoryInMemory } from '../../repositories/in-memory/TodoRepositoryInMemory';
+import { UserRepositoryInMemory } from '../../repositories/in-memory/UserRepositoryInMemory';
 import { CreateTodoUseCase } from './CreateTodoUseCase';
 
-let todoRepository: TodoRepositoryInMemory;
+let userRepository: UserRepositoryInMemory;
 let createTodo: CreateTodoUseCase;
 
 describe('Create todo', () => {
   beforeAll(() => {
-    todoRepository = new TodoRepositoryInMemory();
-    createTodo = new CreateTodoUseCase(todoRepository);
+    userRepository = UserRepositoryInMemory.getInstance();
+    createTodo = new CreateTodoUseCase(userRepository);
   });
 
   test('should be able to create a new todo', async () => {
@@ -17,6 +18,8 @@ describe('Create todo', () => {
     };
 
     const result = await createTodo.execute(todo);
+
+    console.log(result);
 
     expect(result.title).toBe('Nome da tarefa');
   });

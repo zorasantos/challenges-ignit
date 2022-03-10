@@ -20,11 +20,11 @@ describe('Create user', () => {
 
     expect(result).toEqual({
       id: result.id,
-      todo: [],
+      todos: [],
       name: 'Zora Santos',
       username: 'Zora'
     });
-    expect(result.todo).toStrictEqual([]);
+    expect(result.todos).toStrictEqual([]);
   });
 
   test('Should not be able to create a new user when username already exists', async () => {

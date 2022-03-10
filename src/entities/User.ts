@@ -4,12 +4,12 @@ class User {
   id!: string;
   name!: string;
   username!: string;
-  todo!: Array<[]>;
+  todos!: Array<[]>;
 
   constructor() {
     if (!this.id) {
       this.id = uuidV4();
-      this.todo = [];
+      this.todos = [];
     }
   }
 }
